@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1006]D:\New folder (2)\VsProject\CalculatorWebAppTest\CalculatorWebAppTest\bin\Debug\CalculatorWebAppTest.dll</TopNode>
+  <SelectedNode>[0-1002]CalculatorWebTestProject.TestClass.AddTest</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1006]D:\New folder (2)\VsProject\CalculatorWebAppTest\CalculatorWebAppTest\bin\Debug\CalculatorWebAppTest.dll" Expanded="true" />
+    <Node UniqueName="[0-1007]CalculatorWebTestProject" Expanded="true" />
+    <Node UniqueName="[0-1001]CalculatorWebTestProject.TestClass" Expanded="true" />
+  </Nodes>
+</VisualState>

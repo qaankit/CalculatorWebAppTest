@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="D:\New folder (2)\VsProject\CalculatorWebAppTest\CalculatorWebAppTest\bin\Debug\CalculatorWebAppTest.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2017-06-22" time="17:37:04">
+  <environment nunit-version="2.6.2.12296" clr-version="2.0.50727.4927" os-version="Microsoft Windows NT 6.1.7600.0" platform="Win32NT" cwd="D:\New folder (2)\VsProject\CalculatorWebAppTest\CalculatorWebAppTest\bin\Debug" machine-name="GADC000AUD12808" user="GADC000AUD128080Z" user-domain="GADC000AUD12808" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="D:\New folder (2)\VsProject\CalculatorWebAppTest\CalculatorWebAppTest\bin\Debug\CalculatorWebAppTest.dll" executed="True" result="Success" success="True" time="9.548" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="CalculatorWebTestProject" executed="True" result="Success" success="True" time="9.531" asserts="0">
+        <results>
+          <test-suite type="TestFixture" name="TestClass" executed="True" result="Success" success="True" time="9.530" asserts="0">
+            <results>
+              <test-case name="CalculatorWebTestProject.TestClass.AddTest" executed="True" result="Success" success="True" time="9.513" asserts="0" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

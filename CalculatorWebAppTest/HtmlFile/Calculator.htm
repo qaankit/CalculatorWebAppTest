@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>   
+    </title>
+    <style type="text/css">
+        h1
+        {
+            color: white;
+            text-align: center;
+        }
+        .class_textbox
+       {
+            width: 197px;
+            height: 30px;
+            z-index: 1;
+            position: absolute;
+            font-size: large;
+        }       
+        .class_label
+        {
+            font-size: large;
+            color: #000000;
+        }       
+        .class_button
+        {
+            z-index: 1;
+            position: absolute;
+            text-align:center;
+            width: 102px;
+            height: 32px;
+            font-weight: 700;
+            color: Black;
+            background-color: #99CCFF;
+        }
+    </style> 
+    <script language="javascript" type="text/javascript">
+
+        function checkTextField(field,Name) {
+            if (field.value == '') {
+                alert(Name+" is empty");
+            }
+        }
+       
+        function isNumber(evt,obj) {
+            var charCode = (evt.which) ? evt.which : event.keyCode
+            var value = obj.value;
+            var dotcontains = value.indexOf(".") != -1;
+            if (dotcontains)
+                if (charCode == 46) return false;
+            if (charCode == 46) return true;
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+            return true;
+        }
+
+        function isNumberKey(evt, obj) {
+            var LIMIT = 9999.99;
+            var charCode = (evt.which) ? evt.which : event.keyCode
+            var txt = obj.value;
+            if (txt > LIMIT)
+            {
+                obj.value = LIMIT;
+            }
+            if ((txt == LIMIT) && (charCode == 8)) {
+                obj.value = obj.value.toString().substring(0, txt - 1);
+            }
+            var value = obj.value;
+            var dotcontains = value.indexOf(".") != -1;
+            if (dotcontains)
+                if (charCode == 46) return false;
+            if (charCode == 46) return true;
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+            else {
+                if (txt < LIMIT) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            
+        }
+
+        function Calculations(Operations) {
+
+            if (document.getElementById("txtbx_first_no").value == '') {
+                alert("Enter First Number !");
+            }
+            else {
+                if (document.getElementById("txtbx_second_no").value == '') {
+                    alert("Enter Second Number !");
+                }
+                else {
+                    var result = '';
+
+                    if (Operations == 'ADD') {
+
+                        var first_number = parseFloat(document.getElementById("txtbx_first_no").value);
+                        var second_number = parseFloat(document.getElementById("txtbx_second_no").value);
+                        result = first_number + second_number;
+                    }
+                    else if(Operations=='Diff')
+                    {
+                        var first_number = parseFloat(document.getElementById("txtbx_first_no").value);
+                        var second_number = parseFloat(document.getElementById("txtbx_second_no").value);
+                        result = first_number - second_number;
+                    }
+                    else if (Operations == 'Multiply') {
+
+                        var first_number = parseFloat(document.getElementById("txtbx_first_no").value);
+                        var second_number = parseFloat(document.getElementById("txtbx_second_no").value);
+                        result = first_number * second_number;
+                    }
+                    else if (Operations == 'Divide') {
+
+                        var first_number = parseFloat(document.getElementById("txtbx_first_no").value);
+                        var second_number = parseFloat(document.getElementById("txtbx_second_no").value);
+                        result = first_number / second_number;
+                    }
+
+                    document.getElementById("txtbx_result").value = result;
+
+                }
+            }
+        
+        }      
+      
+    </script>
+</head>
+<body style="background-color:lightblue;">
+<h1>Calculations</h1>
+
+       <!-- First Number Textbox-->
+        <input class="class_textbox" id="txtbx_first_no" type="text" onkeyup="return isNumberKey(event, this);" onkeypress="return isNumber(event,this)" onblur="    checkTextField(this, 'First Number');"
+        style=" top: 105px; left: 624px;" />&nbsp;
+
+        <!-- Secnod Number Textbox-->
+        <input class="class_textbox" id="txtbx_second_no" type="text" onkeyup="return isNumberKey(event,this)" onkeypress="return isNumber(event,this)" onblur="checkTextField(this,'Second Number');"
+        style=" top: 182px; left: 624px; bottom: 295px;" />
+
+         <!-- Result Textbox-->
+        <input class="class_textbox" id="txtbx_result" type="text" readonly 
+        style=" top: 360px; left: 534px; bottom: 117px; text-align:center; " />
+
+        <!-- First Label -->
+        <p class="class_label" style=" margin-left:430px;">Enter First Number :</p>&nbsp;
+
+         <!-- Second Label -->
+        <p class="class_label" style=" margin-left:410px;" >Enter Second Number :</p>  
+         
+        <!-- Button ADD -->
+        <p><input class="class_button" id="btn_Add" type="button" value="Add" onclick="Calculations('ADD')" style="  left: 350px; top: 264px; " /></p>
+
+        <!-- Button Substract -->
+        <p><input class="class_button" id="btn_Substract" type="button" value="Substract" onclick="Calculations('Diff')" style="  left: 520px; top: 264px; " /></p>
+
+        <!-- Button Multiply -->
+        <p><input class="class_button" id="btn_Multiply" type="button" value="Multiply" onclick="Calculations('Multiply')" style="  left: 690px; top: 264px; " /></p>
+
+        <!-- Button Divide -->
+        <p><input class="class_button" id="btn_divide" type="button" value="Divide" onclick="Calculations('Divide')" style=" left: 880px; top: 264px; " /></p>
+   
+</body>
+</html> 
